@@ -1,0 +1,21 @@
+name: rdi_tag_team_cloud
+source:
+  table: "rdi_tag_team"
+  row_format: full
+
+transform:
+  - uses: add_field
+    with:
+      fields:
+        - field: after.app_code
+          expression: "`foo`"
+          language: jmespath
+
+output:
+  - uses: redis.write
+    with:
+      data_type: json
+      key:
+        expression: concat(['table:', table, ':', after.id])
+        language: jmespath
+      on_update: merge

@@ -15,7 +15,7 @@ ALTER SEQUENCE public.rdi_tag_team_id_seq OWNED BY public.rdi_tag_team.id;
 
 -- Seed data (10 rows)
 INSERT INTO public.rdi_tag_team (full_name, email, region) VALUES
-  ('Alice Martins',   'alice.martins@example.com',   'us-east-1'),
+  ('Gabriel Cerioni',   'gabriel.cerioni@redis.com',   'us-east-1'),
   ('Bruno Lima',      'bruno.lima@example.com',      'us-west-2'),
   ('Carla Souza',     'carla.souza@example.com',     'eu-west-1'),
   ('Diego Ramos',     'diego.ramos@example.com',     'sa-east-1'),
